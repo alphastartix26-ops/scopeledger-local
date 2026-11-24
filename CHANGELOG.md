@@ -1,5 +1,9 @@
 # Development history
 
+- 0.9.0: local AI evidence review adapters, conservative review gate and aggregate risk-register integration; synthetic fixtures only.
+- 0.8.0: separate team-vault prototype adds workspace ACL, TOTP, audit checkpoint and encrypted recovery.
+- 0.7.0: separate team-vault prototype with roles and review workflow.
+
 - 0.6.1: current-workspace encrypted-backup comparison and unverified-workspace exit warning; separate synthetic public exercise.
 - 0.6.0: declared asset dependency review and evidence-based advisor with optional local model adapter.
 - 0.5.0: public threat-feed collector and repeat-scan adapters; dated risk changes.

@@ -2,7 +2,7 @@
 
 **Turn security findings into an evidence-led executive decision queue.**
 
-`v0.6.1 development candidate` · `Local-first` · `One-time license planned`
+`v0.9.0 development candidate` · `Local-first` · `One-time license planned`
 
 Security teams already have scanners. The difficult part is deciding what matters, what is still unresolved, and what the executive team needs to see. ScopeLedger is a single-operator review console for authorized projects and imported security evidence.
 
@@ -10,7 +10,12 @@ Security teams already have scanners. The difficult part is deciding what matter
 
 **[Try the free synthetic workflow exercise](demo/README.md)** · **[Read the latest sample executive briefing](samples/EXECUTIVE_V061.md)** · **[Request evaluation / purchase availability](https://github.com/alphastartix26-ops/scopeledger-local/issues/new?template=evaluation.yml)** · [한국어](README.ko.md)
 
-## What the development candidate does
+
+## Latest development: AI security evidence review
+
+The v0.9.0 development candidate adds local garak, Promptfoo and ModelScan report adapters, separate failure/error/coverage counts, conditional baseline comparison, conservative review gating and aggregate risk-register integration. See [AI security evidence review](docs/AI_SECURITY_REVIEW.md) for the supported contracts, illustrative example and source provenance. This module has been tested with synthetic reports; actual scanner execution and version compatibility remain unverified. The separate v0.8 team-vault prototype provides workspace ACLs, TOTP, audit-chain checks and encrypted recovery; it is not an integrated enterprise release. The public exercise and older sample below still illustrate the earlier workflow.
+
+## What the earlier local workflow does
 
 | Decision workflow | Scope |
 | --- | --- |
