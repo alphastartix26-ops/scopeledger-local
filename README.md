@@ -2,7 +2,7 @@
 
 **Turn security findings into an evidence-led executive decision queue.**
 
-`v0.9.0 development candidate` · `Local-first` · `One-time license planned`
+`v0.9.1 development candidate` · `Local-first` · `One-time license planned`
 
 Security teams already have scanners. The difficult part is deciding what matters, what is still unresolved, and what the executive team needs to see. ScopeLedger is a single-operator review console for authorized projects and imported security evidence.
 
@@ -13,7 +13,7 @@ Security teams already have scanners. The difficult part is deciding what matter
 
 ## Latest development: AI security evidence review
 
-The v0.9.0 development candidate adds local garak, Promptfoo and ModelScan report adapters, separate failure/error/coverage counts, conditional baseline comparison, conservative review gating and aggregate risk-register integration. See [AI security evidence review](docs/AI_SECURITY_REVIEW.md) for the supported contracts, illustrative example and source provenance. This module has been tested with synthetic reports; actual scanner execution and version compatibility remain unverified. The separate v0.8 team-vault prototype provides workspace ACLs, TOTP, audit-chain checks and encrypted recovery; it is not an integrated enterprise release. The public exercise and older sample below still illustrate the earlier workflow.
+The v0.9.0 development candidate adds local garak, Promptfoo and ModelScan report adapters, separate failure/error/coverage counts, conditional baseline comparison, conservative review gating and aggregate risk-register integration. The v0.9.1 correction distinguishes the Promptfoo export schema, reported exporter version and cached-row accounting; missing evidence remains a review blocker. See [AI security evidence review](docs/AI_SECURITY_REVIEW.md) for the supported contracts, illustrative example and source provenance. This module has been tested with synthetic reports; actual scanner execution and version compatibility remain unverified. The separate v0.8 team-vault prototype provides workspace ACLs, TOTP, audit-chain checks and encrypted recovery; it is not an integrated enterprise release. The public exercise and older sample below still illustrate the earlier workflow.
 
 ## What the earlier local workflow does
 
@@ -38,7 +38,7 @@ The full application currently has a Korean interface and English executive HTML
 
 ## Commercial availability
 
-**Planned initial price: KRW 59,000 equivalent, one-time payment.** Final checkout currency and terms will be displayed only after seller onboarding, product eligibility review, and delivery verification. No recurring subscription is planned. No payment or order is accepted here today. Evaluation requests are non-binding and free; please do not send payment information.
+**Planned initial price: KRW 59,000 equivalent, one-time payment.** Final checkout currency and terms will be displayed only after seller onboarding, final product-scope eligibility confirmation, and delivery verification. No recurring subscription is planned. No payment or order is accepted here today. Evaluation requests are non-binding and free; please do not send payment information.
 
 ## Evaluation boundaries
 

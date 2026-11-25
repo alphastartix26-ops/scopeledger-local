@@ -1,5 +1,7 @@
 # Development history
 
+- 0.9.1: distinguish Promptfoo exporter version from schema and retain nullable cache accounting; conservative review/comparison hold and sanitized provenance exports, verified with synthetic fixtures.
+
 - 0.9.0: local AI evidence review adapters, conservative review gate and aggregate risk-register integration; synthetic fixtures only.
 - 0.8.0: separate team-vault prototype adds workspace ACL, TOTP, audit checkpoint and encrypted recovery.
 - 0.7.0: separate team-vault prototype with roles and review workflow.
