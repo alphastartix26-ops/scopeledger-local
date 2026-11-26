@@ -35,6 +35,21 @@ On 2026-11-25 the owner-side development candidate passed 290 Node tests (includ
 
 Source: [Promptfoo export metadata implementation](https://github.com/promptfoo/promptfoo/blob/main/src/util/output.ts), reviewed Git blob `10c2b2a528de7b8047cd423c5530b68b451b43ea`; [output and evaluation types](https://github.com/promptfoo/promptfoo/blob/main/src/types/index.ts), blob `70ecbd4aefebc609d74f8e3357f125f65db0ca58`. These are reviewed blob identities, not release tags.
 
+## Why a review declaration must follow the evidence context
+
+A review declaration is only useful when the reviewer can identify what it covers. Changing the registration asset, scope identifier or observation date after confirming the evaluation context requires a new review. Similarly, restoring a workspace must not silently reuse an unregistered dashboard session, even if the workspace has the same identifier.
+
+In the v0.9.2 local development candidate, these changes reset the relevant review/comparability declarations. HTML exports include conditional baseline digests and per-tool comparison status, without the original paths, outputs or author metadata. A ModelScan report that claims zero scanned artifacts but lists nonempty scanned files is rejected as contradictory; genuine zero coverage remains incomplete.
+
+| Illustrative input or action | Expected behavior |
+| --- | --- |
+| Change the approved scope after recording review | Re-review before registration |
+| Restore an earlier workspace with the same ID | Clear the session-only AI dashboard |
+| Zero scanned artifacts with a nonempty file list | Reject inconsistent evidence |
+| Different report digest and declared comparable evaluation | Conditional per-tool delta only; no proof of remediation |
+
+On 2026-11-26 the local candidate passed 296 Node tests and 40 Chromium checks using synthetic fixtures, including actual file-input, export and legacy checksum restore UI checks and Node encrypted workspace round-trip checks. This does not establish actual external scanner compatibility, Windows deployment, encrypted browser-vault operation or enterprise certification. The candidate remains unpublished for paid distribution.
+
 ## Source review and provenance
 
 - [garak evaluator](https://github.com/NVIDIA/garak/blob/main/garak/evaluators/base.py) (blob b6ad3b4bb77609b69b948b2ec41bac4dbed05b0c) and [run lifecycle](https://github.com/NVIDIA/garak/blob/main/garak/command.py) (2fb56c1960d6e7fe6e9c03e1e3a9fb31b191e282); Apache-2.0.
