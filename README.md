@@ -10,7 +10,7 @@
 
 The early commercial local edition is available on Gumroad. The checkout price is US$44 before applicable taxes; localized prices may vary. The purchase delivers one ZIP containing the standalone HTML application, setup guide, supported-format and AI-review guides, synthetic SARIF sample, license/support terms, validation record and integrity manifest. No subscription or paid API is required by the app. One named operator may use the delivered version for authorized internal/client review and commercial report output; software redistribution and multi-user sharing are not included. Installation/defect support is available by receipt reply for 30 days; a 14-day refund window applies without limiting mandatory rights.
 
-The seller completed Gumroad's no-charge test checkout and verified that the receipt lists the uploaded 75,516-byte ZIP. **End-to-end receipt-download byte comparison is still pending:** the seller's browser blocked the file-server request. This is not a real customer sale and does not establish payment settlement.
+On November 27, 2026, the ZIP downloaded from a Gumroad test receipt matched the published package in size (75,516 bytes) and SHA-256 (`01485a7f389ecbdbf974c62d32cba929402febbc291680d730946f4e0741d721`). On Windows, the code inside that ZIP saved an encrypted workspace and restored its complete contents in a fresh Node process. The Windows browser interface still awaits a separate check.
 
 ## Included workflow
 
