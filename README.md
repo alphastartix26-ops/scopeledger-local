@@ -1,49 +1,44 @@
 # ScopeLedger Executive
 
-**Turn security findings into an evidence-led executive decision queue.**
+**Turn existing security evidence into a human review queue and executive briefing.**
 
-`v0.9.1 development candidate` · `Local-first` · `One-time license planned`
+`Local Review Edition v0.9.2` · `Korean UI / English reports` · `One named operator`
 
-Security teams already have scanners. The difficult part is deciding what matters, what is still unresolved, and what the executive team needs to see. ScopeLedger is a single-operator review console for authorized projects and imported security evidence.
+[**Purchase the local edition — US$44 one-time**](https://alphastartix.gumroad.com/l/cbrtll) · [Free synthetic workflow exercise](demo/README.md) · [한국어](README.ko.md)
 
-![Illustration of a synthetic executive report, not a product screenshot](executive-report-preview.svg)
+## Current availability — November 27, 2026
 
-**[Try the free synthetic workflow exercise](demo/README.md)** · **[Read the latest sample executive briefing](samples/EXECUTIVE_V061.md)** · **[Request evaluation / purchase availability](https://github.com/alphastartix26-ops/scopeledger-local/issues/new?template=evaluation.yml)** · [한국어](README.ko.md)
+The early commercial local edition is available on Gumroad. The checkout price is US$44 before applicable taxes; localized prices may vary. The purchase delivers one ZIP containing the standalone HTML application, setup guide, supported-format and AI-review guides, synthetic SARIF sample, license/support terms, validation record and integrity manifest. No subscription or paid API is required by the app. One named operator may use the delivered version for authorized internal/client review and commercial report output; software redistribution and multi-user sharing are not included. Installation/defect support is available by receipt reply for 30 days; a 14-day refund window applies without limiting mandatory rights.
 
+The seller completed Gumroad's no-charge test checkout and verified that the receipt lists the uploaded 75,516-byte ZIP. **End-to-end receipt-download byte comparison is still pending:** the seller's browser blocked the file-server request. This is not a real customer sale and does not establish payment settlement.
 
-## Latest development: AI security evidence review
+## Included workflow
 
-The v0.9.0 development candidate adds local garak, Promptfoo and ModelScan report adapters, separate failure/error/coverage counts, conditional baseline comparison, conservative review gating and aggregate risk-register integration. The v0.9.1 correction distinguishes the Promptfoo export schema, reported exporter version and cached-row accounting; missing evidence remains a review blocker. See [AI security evidence review](docs/AI_SECURITY_REVIEW.md) for the supported contracts, illustrative example and source provenance. This module has been tested with synthetic reports; actual scanner execution and version compatibility remain unverified. The separate v0.8 team-vault prototype provides workspace ACLs, TOTP, audit-chain checks and encrypted recovery; it is not an integrated enterprise release. The public exercise and older sample below still illustrate the earlier workflow.
-
-## What the earlier local workflow does
-
-| Decision workflow | Scope |
+| Task | Delivered scope |
 | --- | --- |
-| Evidence intake | 22 heuristic configuration rules; limited SARIF, Trivy and Gitleaks imports; optional Trivy/Gitleaks/Bandit execution adapters |
-| Risk reconciliation | Exact scoped Trivy dependency identity grouping, version and patch evidence, raw versus grouped counts |
-| Threat context | Dated CISA KEV, FIRST EPSS and NVD input; local collection adapters; explicit missing/stale evidence |
-| Remediation review | Human decisions, ownership, due dates, acceptance expiry, repeat-observation comparison |
-| Dependency context | Operator-declared asset dependencies and bounded direct/indirect impact review |
-| Evidence-based advisor | Deterministic remediation-review suggestions; optional local Ollama ordering adapter |
-| Reporting and backup | English executive HTML, internal CSV, AES-256-GCM encrypted backup, current-workspace verification and exit warning |
+| Evidence intake | 22 heuristic configuration checks; bounded SARIF 2.1.0, Trivy SchemaVersion 2 and Gitleaks JSON imports |
+| Review | Scoped reconciliation, raw versus grouped counts, human decisions, owners, due dates and acceptance expiry |
+| Context | Manual threat-context inputs and operator-declared asset dependencies |
+| Response planning | Rule-based suggestions; no model execution |
+| AI evidence | Bounded aggregate garak, Promptfoo v3 and ModelScan report review; missing evidence remains HOLD |
+| Reports and storage | English executive HTML, internal CSV and encrypted workspace backup with read-back comparison |
 
-The full application currently has a Korean interface and English executive HTML export. Scanner binaries, AI models and threat databases are not bundled. The public exercise is a separate synthetic demo, not the paid application.
+No scanner binaries, native runner, AI model, automated threat-feed synchronization, team server, SSO/RBAC, hosted service or enterprise certification are included. Optional integration panels are hidden/disabled in this edition. The separate team/native prototypes described in historical development notes are not part of the purchase.
 
-## See the workflow
+## Validation and limits
 
-1. Review the [sample executive report](samples/EXECUTIVE_V061.md): 13 active review cases, 14 raw evidence records, 3 registered assets, 2 declared dependency links. These are synthetic demonstration observations, not customer results.
-2. Download [the synthetic exercise](demo/ScopeLedger_Demo.html) from GitHub and open it locally. Select a risk, change review status, and compare how the executive action queue changes.
-3. Use the [risk-review checklist](docs/RISK_REVIEW_CHECKLIST.md) to evaluate how a review process handles stale evidence, repeat observations and human decisions.
-4. If this workflow would help your team, [request evaluation / purchase availability](https://github.com/alphastartix26-ops/scopeledger-local/issues/new?template=evaluation.yml). Do not share sensitive data.
+- Re-run on Windows with Node.js 24.19.0: **296/296 engine regression tests** and **9/9 archive-admission tests** passed. The shipped HTML scripts parse; the included synthetic SARIF sample is accepted by the engine. Original owner/evaluation archive manifests were verified.
+- **This exact package's Windows browser UI and encrypted browser save/read-back/restore remain unverified.** The automation tool rejected local-file navigation; that restriction was not bypassed. Node cryptography checks do not establish browser UI compatibility.
+- The original v0.9.2 source archive records 40 prior synthetic Chromium UI checks; those are historical upstream results, not new validation of the delivered Windows edition wrapper.
+- Actual externally generated scanner/version combinations, Firefox/Safari, mobile operation and enterprise deployment are not validated. Test synthetic data and backup recovery in an approved browser before real work. Do not bypass organizational controls.
+- Findings are heuristic review items, not proof of exploitability, complete scan coverage, compliance or safety. Source hashes are fingerprints, not signatures. Session data is not autosaved; exports and source reports need separate protection. Forgotten backup passphrases cannot be recovered.
 
-## Commercial availability
+## Explore before purchasing
 
-**Planned initial price: KRW 59,000 equivalent, one-time payment.** Final checkout currency and terms will be displayed only after seller onboarding, final product-scope eligibility confirmation, and delivery verification. No recurring subscription is planned. No payment or order is accepted here today. Evaluation requests are non-binding and free; please do not send payment information.
+[Free synthetic exercise](demo/README.md) · [Synthetic executive report](samples/EXECUTIVE_V061.md) · [Risk-review checklist](docs/RISK_REVIEW_CHECKLIST.md) · [AI report contract notes](docs/AI_SECURITY_REVIEW.md)
 
-## Evaluation boundaries
-
-This is a local single-operator development candidate, not an enterprise-certified security platform. No SSO/RBAC, centrally encrypted multi-user store, SIEM/EDR integration or authenticated immutable audit is provided. External scanner/model/feed integration and scheduled operation require separate installation and real-environment verification. The local engine is heuristic; imported records do not prove exploitable vulnerabilities, complete coverage or remediation. Registered dependency relationships are not network discovery or attack paths. The checksums are not signatures. Successful secure-context browser vault verification and actual Windows and enterprise deployment remain unverified. Use authorized data only.
+The public exercise illustrates an earlier workflow and is not the paid application. All examples are synthetic, not customer results. Do not post confidential evidence in GitHub issues.
 
 [Version history](CHANGELOG.md) · [Security and responsible use](SECURITY.md)
 
-The public exercise and sample material are provided for evaluation. The commercial application source and private distribution files are not published here.
+Commercial source and buyer distribution files remain private; this repository contains public documentation and synthetic examples only.
