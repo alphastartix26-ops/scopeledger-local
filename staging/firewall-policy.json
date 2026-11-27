@@ -3,7 +3,6 @@
   "public_routes": [
     "/health",
     "/catalog",
-    "/hours",
-    "/team-notes"
+    "/hours"
   ]
 }
