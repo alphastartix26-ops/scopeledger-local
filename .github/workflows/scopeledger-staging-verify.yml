@@ -1,0 +1,20 @@
+name: ScopeLedger isolated firewall test
+on:
+  push:
+    branches: [scopeledger-firewall-verify]
+permissions:
+  contents: read
+jobs:
+  packet-filter:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Load the exact trusted test revision
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init --quiet
+          git fetch --quiet --depth=1 "https://github.com/${GITHUB_REPOSITORY}.git" "$GITHUB_SHA"
+          git checkout --quiet --detach FETCH_HEAD
+      - name: Exercise kernel filtering after the policy evaluator exits
+        run: python3 staging/verification/kernel_trial.py
