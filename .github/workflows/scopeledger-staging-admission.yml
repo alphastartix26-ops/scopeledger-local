@@ -1,0 +1,35 @@
+name: ScopeLedger staging admission
+on:
+  push:
+    branches: [scopeledger-firewall-lab]
+    paths:
+      - staging/firewall-policy.json
+      - .github/workflows/scopeledger-staging-admission.yml
+permissions:
+  contents: read
+jobs:
+  admission:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - name: Evaluate the proposed policy as data using the pinned model
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init --quiet
+          git fetch --quiet --depth=1 "https://github.com/alphastartix26-ops/scopeledger-local.git" 9fa78fa40f7a6dac424056c5588c491628ee12f2
+          git show FETCH_HEAD:staging/verification/policy.py > policy.py
+          git fetch --quiet --depth=1 "https://github.com/alphastartix26-ops/scopeledger-local.git" "$GITHUB_SHA"
+          git show FETCH_HEAD:staging/firewall-policy.json > candidate.json
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          from policy import assess, decode
+          with Path("candidate.json").open("rb") as source:
+              raw = source.read(4097)
+          if len(raw) > 4096:
+              raise SystemExit("BLOCK: policy too large")
+          verdict = assess(decode(raw))
+          print(json.dumps(verdict, indent=2), flush=True)
+          raise SystemExit(0 if verdict["decision"] == "allow" else 1)
+          PY
