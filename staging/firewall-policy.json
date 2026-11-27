@@ -2,6 +2,7 @@
   "version": 1,
   "public_routes": [
     "/health",
-    "/catalog"
+    "/catalog",
+    "/hours"
   ]
 }
